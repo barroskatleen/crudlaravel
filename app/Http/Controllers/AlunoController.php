@@ -48,7 +48,7 @@ class AlunoController extends Controller
         if($this->validation()){
             $aluno = new Aluno;
             $aluno->id_aluno = Input::get('id_aluno');
-            $aluno->name = Input::get('nome');
+            $aluno->name = Input::get('name');
             $aluno->data_nascimento = Input::get('data_nascimento');
             $aluno->logradouro = Input::get('logradouro');
             $aluno->numero = Input::get('numero');

@@ -47,7 +47,7 @@ class ProfessorController extends Controller
          if($this->validation()){
             $professor = new Professor;
             $professor->id_professor = Input::get('id_professor');
-            $professor->name = Input::get('nome');
+            $professor->name = Input::get('name');
             $professor->data_nascimento = Input::get('data_nascimento');
             $professor->save();
             return redirect()->route('professores.index')->with('message', 'Professor cadastrado com sucesso');

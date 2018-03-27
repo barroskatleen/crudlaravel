@@ -54,7 +54,7 @@ class CursoController extends Controller
         if($this->validation()){
             $curso = new Curso;
             $curso->id_curso = Input::get('id_curso');
-            $curso->name = Input::get('nome');
+            $curso->name = Input::get('name');
             $curso->save();
             return redirect()->route('cursos.index')->with('message', 'Curso cadastrado com sucesso');
         } else {

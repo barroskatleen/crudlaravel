@@ -38,7 +38,7 @@
 
   <div class="form-group">
         {{ Form::label('Nome', 'Nome') }}
-        {{ Form::text('nome', Input::old('nome'), array('class' => 'form-control','maxlength' => 100)) }}
+        {{ Form::text('name', Input::old('name'), array('class' => 'form-control','maxlength' => 100)) }}
   </div>
 
   <div class="form-group">
