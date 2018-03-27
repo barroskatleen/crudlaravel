@@ -35,12 +35,12 @@
 
     <div class="form-group">
         {{ Form::label('id_curso', 'Id Curso') }}
-        {{ Form::text('id_curso', null, array('class' => 'form-control')) }}
+        {{ Form::text('id_curso', null, array('class' => 'form-control''maxlength' => 10)) }}
     </div>
 
     <div class="form-group">
         {{ Form::label('name', 'Nome') }}
-        {{ Form::text('name', null, array('class' => 'form-control')) }}
+        {{ Form::text('name', null, array('class' => 'form-control''maxlength' => 100)) }}
     </div>
 
     

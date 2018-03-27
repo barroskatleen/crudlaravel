@@ -40,7 +40,7 @@
             <td>ID Aluno</td>
             <td>Name</td>
             <td>Data de Nascimento</td>
-            <td>logradouro</td>
+            <td>Logradouro</td>
             <td>Numero</td>
             <td>Bairro</td>
             <td>Cidade</td>
