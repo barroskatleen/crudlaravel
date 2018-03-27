@@ -17,6 +17,13 @@ class ProfessorController extends Controller
         $professores = Professor::orderBy('created_at', 'desc')->paginate(10);
         return view('professores.index')->with('professores', $professores);
     }
+    
+
+    public function export()
+    {
+        $professores = Professor::orderBy('created_at', 'desc')->paginate(10);
+        return \PDF::loadView('professores.pdf', compact('professores'))->download('relatorio.pdf');
+    }
 
     /**
      * Show the form for creating a new resource.
