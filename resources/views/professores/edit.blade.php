@@ -30,17 +30,17 @@
 
     <div class="form-group">
         {{ Form::label('id_professor', 'Id Professor') }}
-        {{ Form::text('id_professor', null, array('class' => 'form-control''maxlength' => 10)) }}
+        {{ Form::text('id_professor', null, array('class' => 'form-control','maxlength' => 10)) }}
     </div>
 
     <div class="form-group">
         {{ Form::label('name', 'Nome') }}
-        {{ Form::text('name', null, array('class' => 'form-control''maxlength' => 100)) }}
+        {{ Form::text('name', null, array('class' => 'form-control','maxlength' => 100)) }}
     </div>
 
     <div class="form-group">
         {{ Form::label('data_nascimento', 'Data de Nascimento') }}
-        {{ Form::text('data_nascimento', null, array('class' => 'form-control''maxlength' => 10)) }}
+        {{ Form::text('data_nascimento', null, array('class' => 'form-control','maxlength' => 10)) }}
     </div>
 
     

@@ -31,7 +31,7 @@
         <p>
             <strong>Id curso:</strong> {{ $curso->id_curso }}<br>
             <strong>Nome:</strong> {{ $curso->name }}<br>
-            <strong>{{ date('d/M/Y', $value->created_at->timestamp) }}</strong>
+            <strong>Data de Criação</strong>{{ date('d/M/Y', $curso->created_at->timestamp) }}<br>
             
 
         </p>

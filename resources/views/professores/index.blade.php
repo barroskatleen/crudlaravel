@@ -54,7 +54,7 @@
             
 
             <!-- we will also add show, edit, and delete buttons -->
-            <td>
+               <td style="width: 200px;">
 
                 <!-- delete the professor (uses the destroy method DESTROY /professores/{id} -->
                 <!-- we will add this later since its a little more complicated than the other two buttons -->

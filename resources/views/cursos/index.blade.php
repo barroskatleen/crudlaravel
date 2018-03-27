@@ -48,7 +48,7 @@
             <td>{{ date('d/M/Y', $value->created_at->timestamp) }}</td>
 
             <!-- we will also add show, edit, and delete buttons -->
-            <td>
+                <td style="width: 200px;">
 
                 <!-- delete the curso (uses the destroy method DESTROY /curso/{id} -->
                 <!-- we will add this later since its a little more complicated than the other two buttons -->
