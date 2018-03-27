@@ -39,6 +39,7 @@
             <strong>Cidade:</strong> {{ $aluno->cidade }}<br>
             <strong>Estado:</strong> {{ $aluno->estado }}<br>
             <strong>Cep:</strong> {{ $aluno->cep }}<br>
+            <strong>Data de criação:</strong> {{ date('d/M/Y', $aluno->created_at->timestamp) }}<br>
             
 
         </p>

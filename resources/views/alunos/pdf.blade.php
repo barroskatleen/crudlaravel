@@ -46,6 +46,8 @@
         <td>Cidade</td>
         <td>Estado</td>
         <td>Cep</td>
+        <td>Data de Criação</td>
+
     </tr>
     <tr>
         <td>{{ $value->numero }}</td>
@@ -53,6 +55,7 @@
         <td>{{ $value->cidade }}</td>
         <td>{{ $value->estado }}</td>
         <td>{{ $value->cep }}</td>
+        <td>{{ date('d/M/Y', $value->created_at->timestamp) }}</td>
       
     </tr>
 </table>

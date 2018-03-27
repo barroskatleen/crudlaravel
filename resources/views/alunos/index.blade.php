@@ -40,12 +40,7 @@
             <td>ID Aluno</td>
             <td>Name</td>
             <td>Data de Nascimento</td>
-            <td>Logradouro</td>
-            <td>Numero</td>
-            <td>Bairro</td>
-            <td>Cidade</td>
-            <td>Estado</td>
-            <td>Cep</td>
+            <td>Data de Criação</td>
         </tr>
     </thead>
     <tbody>
@@ -53,16 +48,12 @@
         <tr>
             <td>{{ $value->id_aluno }}</td>
             <td>{{ $value->name }}</td>
-            <td>{{ $value->data_nascimento }}</td>
-            <td>{{ $value->logradouro }}</td>
-            <td>{{ $value->numero }}</td>
-            <td>{{ $value->bairro }}</td>
-            <td>{{ $value->cidade }}</td>
-            <td>{{ $value->estado }}</td>
-            <td>{{ $value->cep }}</td>
+            <td>{{ date('d/M/Y', strtotime($value->data_nascimento)) }}</td>
+           
+            <td>{{ date('d/M/Y', $value->created_at->timestamp) }}</td>
 
             <!-- we will also add show, edit, and delete buttons -->
-            <td>
+            <td style="width: 200px;">
 
                 <!-- delete the aluno (uses the destroy method DESTROY /alunos/{id} -->
                 <!-- we will add this later since its a little more complicated than the other two buttons -->

@@ -37,6 +37,7 @@
         <tr>
             <td>ID Curso</td>
             <td>Name</td>
+            <td>Data de Criação</td>
         </tr>
     </thead>
     <tbody>
@@ -44,7 +45,7 @@
         <tr>
             <td>{{ $value->id_curso }}</td>
             <td>{{ $value->name }}</td>
-            
+            <td>{{ date('d/M/Y', $value->created_at->timestamp) }}</td>
 
             <!-- we will also add show, edit, and delete buttons -->
             <td>

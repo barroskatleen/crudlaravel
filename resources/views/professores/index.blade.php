@@ -40,6 +40,7 @@
             <td>ID Professor</td>
             <td>Name</td>
             <td>Data de Nascimento</td>
+            <td>Data de Criação</td>
         </tr>
     </thead>
     <tbody>
@@ -47,7 +48,9 @@
         <tr>
             <td>{{ $value->id_professor }}</td>
             <td>{{ $value->name }}</td>
-            <td>{{ $value->data_nascimento }}</td>
+            <td>{{ date('d/M/Y', strtotime($value->data_nascimento)) }}</td>
+           
+            <td>{{ date('d/M/Y', $value->created_at->timestamp) }}</td>
             
 
             <!-- we will also add show, edit, and delete buttons -->

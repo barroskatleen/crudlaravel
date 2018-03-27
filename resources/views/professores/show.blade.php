@@ -32,7 +32,9 @@
             <strong>Id Professor:</strong> {{ $professor->id_professor }}<br>
             <strong>Nome:</strong> {{ $professor->name }}<br>
             <strong>Data de Nascimento:</strong> {{ $professor->data_nascimento }}<br>
-            
+            <strong>{{ date('d/M/Y', strtotime($value->data_nascimento)) }}</strong>
+           
+            <strong>{{ date('d/M/Y', $value->created_at->timestamp) }}</strong>
             
 
         </p>
