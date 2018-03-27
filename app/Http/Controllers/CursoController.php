@@ -92,10 +92,10 @@ class CursoController extends Controller
     public function update($id)
     {
         $curso = Curso::findOrFail($id);
+        $curso->id_curso = Input::get('id_curso');
+        $curso->name = Input::get('name');
 
         if($this->validation()){
-           $curso->id_curso = Input::get('id_curso');
-           $curso->name = Input::get('name');
            $curso->save();
            return redirect()->route('cursos.index')->with('message', 'Curso alterado com sucesso');
         } else {

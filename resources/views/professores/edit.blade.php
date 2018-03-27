@@ -26,6 +26,10 @@
 
 <h1>Edição de Professores</h1>
 
+@if (!empty($message))
+    <div class="alert alert-info">{{ $message }}</div>
+@endif
+
 {{ Form::model($professor, array('route' => array('professores.update', $professor->id), 'method' => 'PUT')) }}
 
     <div class="form-group">

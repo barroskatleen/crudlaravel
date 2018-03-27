@@ -96,17 +96,17 @@ class AlunoController extends Controller
     public function update($id)
     {
         $aluno = Aluno::findOrFail($id);
+        $aluno->id_aluno = Input::get('id_aluno');
+        $aluno->name = Input::get('name');
+        $aluno->data_nascimento = Input::get('data_nascimento');
+        $aluno->logradouro = Input::get('logradouro');
+        $aluno->numero = Input::get('numero');
+        $aluno->bairro = Input::get('bairro');
+        $aluno->cidade = Input::get('cidade');
+        $aluno->estado = Input::get('estado');
+        $aluno->cep = Input::get('cep');
 
         if($this->validation()){
-            $aluno->id_aluno = Input::get('id_aluno');
-            $aluno->name = Input::get('name');
-            $aluno->data_nascimento = Input::get('data_nascimento');
-            $aluno->logradouro = Input::get('logradouro');
-            $aluno->numero = Input::get('numero');
-            $aluno->bairro = Input::get('bairro');
-            $aluno->cidade = Input::get('cidade');
-            $aluno->estado = Input::get('estado');
-            $aluno->cep = Input::get('cep');
             $aluno->save();
             return redirect()->route('alunos.index')->with('message', 'Aluno alterar com sucesso');
         } else {

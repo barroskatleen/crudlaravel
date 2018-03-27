@@ -91,11 +91,11 @@ class ProfessorController extends Controller
     public function update($id)
     {
         $professor = Professor::findOrFail($id);
+        $professor->id_professor = Input::get('id_professor');
+        $professor->name = Input::get('name');
+        $professor->data_nascimento = Input::get('data_nascimento');
         
         if($this->validation()){
-            $professor->id_professor = Input::get('id_professor');
-            $professor->name = Input::get('name');
-            $professor->data_nascimento = Input::get('data_nascimento');
             $professor->save();
             return redirect()->route('professores.index')->with('message', 'Professor alterado com sucesso');
         } else {

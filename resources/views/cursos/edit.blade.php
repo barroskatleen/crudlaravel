@@ -26,8 +26,8 @@
 
 <h1>Edição de Cursos</h1>
 
-@if (Session::has('message'))
-    <div class="alert alert-info">{{ Session::get('message') }}</div>
+@if (!empty($message))
+    <div class="alert alert-info">{{ $message }}</div>
 @endif
 
 
