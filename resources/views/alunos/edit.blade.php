@@ -8,9 +8,18 @@
     <nav class="navbar navbar-inverse">
     <ul class="nav navbar-nav">
         <li><a href="{{ URL::to('alunos') }}">Alunos</a></li>
-        <li><a href="{{ URL::to('cursos') }}">Cursos</a>
-        <li><a href="{{ URL::to('professores') }}">Professores</a>
-    </ul>
+        <li><a href="{{ URL::to('cursos') }}">Cursos</a></li>
+        <li><a href="{{ URL::to('professores') }}">Professores</a></li>
+        <li><a class="dropdown-item" href="{{ route('logout') }}"
+        onclick="event.preventDefault();
+                 document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+            </a>
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+            </form></li>
+        </ul>
 </nav>
 <div class="container">
 
@@ -20,7 +29,7 @@
     <ul class="nav navbar-nav">
         <li><a href="{{ URL::to('alunos') }}">Gerenciar alunos</a></li>
         <li><a href="{{ URL::to('alunos') }}">Visualizar Alunos</a></li>
-        <li><a href="{{ URL::to('alunos/create') }}">Cadastrar Aluno</a>
+        <li><a href="{{ URL::to('alunos/create') }}">Cadastrar Aluno</a></li>
     </ul>
 </nav>
 

@@ -15,9 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/alunos/export', 'AlunoController@export')->name('alunos.export');
-Route::resource('alunos', 'AlunoController');
-Route::get('/cursos/export', 'CursoController@export')->name('cursos.export');
-Route::resource('cursos', 'CursoController');
-Route::get('/professores/export', 'ProfessorController@export')->name('professores.export');
-Route::resource('professores', 'ProfessorController');
+Route::group(array('before' => 'auth'), function() {
+	Auth::routes();
+	Route::get('/alunos/export', 'AlunoController@export')->name('alunos.export');
+	Route::resource('alunos', 'AlunoController');
+	Route::get('/cursos/export', 'CursoController@export')->name('cursos.export');
+	Route::resource('cursos', 'CursoController');
+	Route::get('/professores/export', 'ProfessorController@export')->name('professores.export');
+	Route::resource('professores', 'ProfessorController');
+	
+
+	Route::get('/home', 'HomeController@index')->name('home');
+});
